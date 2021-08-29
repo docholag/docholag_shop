@@ -1,0 +1,136 @@
+/*BEGIN BASE CSS*/
+:root {  
+    --white-color: #fff ;
+    --black-color: #000;
+    --text-color: #333;
+    --boder-color: #dbdbdb;
+
+    --header-height: 120px;
+    --navbar-height: 31px;
+    --header-with-search-height: calc(var(--header-height) - var(--navbar-height));
+}
+
+* {
+    box-sizing: inherit; /*để kế thừa lại các thuộc tính chứa nó*/
+}
+
+html {
+    /*trick*/
+    font-size: 62.5%; /*khi dùng rem: 1 rem bằng 10px (mặc định trình duyệt 16)*/
+    line-height: 1.6rem; 
+    font-family: 'Roboto', sans-serif; /*trong khi Roboto chưa tải được, sẽ dùng san-serif*/
+    box-sizing: border-box; /*bá nhất*/
+}
+
+
+
+.grid { 
+    width: 1200px;
+    max-width: 100%; /*giảm kích thước grid tương ứng với màn hình nhỏ hơn 1200px*/
+    margin: 0 auto; /*tự động căn giữa khối này nằm trong khối khác*/
+}
+ 
+.grid__full-width { /*trường hợp không muốn sử dụng grid ở trên*/
+    width: 100%;
+}
+
+.grid__row {  /*dùng cho class muốn nằm trên 1 hàng ngang*/
+    display: flex;
+    flex-wrap: wrap; /*khi zoom out sẽ xuống hàng*/
+}
+
+
+/*ANIMATION*/
+@keyframes FadeIn{ /*animation hiện lên từ từ*/
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+
+}
+/*button lớn lên từ từ, to dần lên*/
+@keyframes Growth {
+    from{
+        transform: scale(var(--Growth-from));
+    }
+
+    to{
+        transform: scale(var(--Growth-to));
+    }
+
+    
+}
+
+
+/*modal layout*/
+.modal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    animation: FadeIn linear 0.1s; /*background hiện từ từ lên*/
+}
+
+.modal__overlay{
+    position: absolute; /*con của modal*/
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal__body{
+    margin: auto; /*tự động căn giữa vì có modal flex*/
+    /* width: 300px; không cần set, viết content vào thì nó tự to ra
+    height: 300px; */
+    position: relative; /*để body nằm trên overlay*/
+    z-index: 1; /*mặc định bọn còn lại là 0, thằng mô nhiều điểm hơn thì nằm trên cùng*/
+    --Growth-from: 0.7; /*đầu tiên là 70%*/
+    --Growth-to: 1; /*sau đó to lên kích thước tối đa của nó */
+    animation: Growth linear 0.1s; /*animation lớn lên từ từ*/
+}
+
+/*button-style*/
+
+.btn{
+    min-width: 140px;
+    height: 36px;
+    text-decoration: none;
+    border-radius: 6px;
+    border: none;
+    font-size: 1.3rem;
+    padding: 0;
+    outline: none;
+    cursor: pointer;
+/*căn cho btn size s*/
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+}
+
+.btn:hover{
+    opacity: 0.7;
+}
+
+.btn.btn--primary{
+    background-color: var(--black-color);
+    color: var(--white-color);
+    
+}
+
+.btn.btn--disabled{ /*class vô hiệu hoá btn*/
+    cursor: default;
+    color: #ccc;
+    background-color: #999;
+}
+
+.btn.btn--size-s{
+    height: 30px;
+    font-size: 12px;
+    color: var(--text-color);
+
+}
