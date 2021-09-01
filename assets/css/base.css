@@ -23,6 +23,9 @@ html {
 }
 
 
+/*responsive*/
+/*có 3 cấp, ngoài cùng là Grid, trong grid có row, trong row có column
+trong grid có nhiều row, trong col có thể có nhiều col khác*/
 
 .grid { 
     width: 1200px;
@@ -37,8 +40,48 @@ html {
 .grid__row {  /*dùng cho class muốn nằm trên 1 hàng ngang*/
     display: flex;
     flex-wrap: wrap; /*khi zoom out sẽ xuống hàng*/
+    /*nguyên tắc để chia grid*/
+    margin-left: -5px; 
+    margin-right: -5px;
 }
 
+/*test, chuẩn bị cho responsive*/
+.grid__column-2{
+    /*tự sửa*/ padding-top: 52px;
+
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 16.6667%;
+}
+
+.gird__column-2-4{
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 20%;
+}
+
+.grid__column-10{
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 83.3334%;
+}
+
+.grid__column-5{
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 20%;
+}
+
+.grid__column-100{
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 100%;
+}
+.grid__column50-50{
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 50%;
+}
 
 /*ANIMATION*/
 @keyframes FadeIn{ /*animation hiện lên từ từ*/
@@ -133,4 +176,12 @@ html {
     font-size: 12px;
     color: var(--text-color);
 
+}
+
+.white--content{
+    color: #fff;
+}
+
+.black--background{
+    background-color: #000;
 }

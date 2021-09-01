@@ -36,7 +36,7 @@
                         </li>
                         <li class="header__navbar-item">
                             <span class="header__navbar-tittle--no-pointer">
-                                Kết nối
+                                Liên hệ
                             </span>
                             <a href="https://www.facebook.com/docholag" class="header__navbar-icon-link">
                                 <i class="header__navbar-icon fab fa-facebook"></i>
@@ -71,23 +71,431 @@
                     </div>
 
                     <div class="header__search">
+                        <div class="header__search-input-wrap">
+                            <input type="text" class="header__search-input" placeholder="Tìm kiếm trong shop">
 
+                            <!--search history-->
+                            <div class="header__search-history">
+                                <h3 class="header__search-history-heading">Lịch sử tìm kiếm</h3>
+                                <ul class="header__search-history-list">
+                                    <li class="header__search-history-item">
+                                        <a href="">Macbook Pro M1 max option</a>
+                                    </li>
+                                    <li class="header__search-history-item">
+                                        <a href="">Macbook Air 2020 i3</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="header__search-select">
+                            <span class="header__search-select-lable">Trong shop</span>
+                            <i class="header__search-select-icon fas fa-chevron-down"></i>
+                            <!--phần xổ xuống-->
+                            <ul class="header__search-option">
+                                <li class="header__search-option-item header__search-option-item--active">
+                                    <span>Trong shop</span>
+                                    <i class="fas fa-check-circle"></i>
+                                </li>
+                                <li class="header__search-option-item">
+                                    <span>Bên ngoài</span>
+                                    <i class="fas fa-check-circle"></i>
+                                </li>
+                            </ul>
+                        </div>
+                            
+                        <button class="header__search-btn">
+                            <i class="header__search-btn-icon fas fa-search"></i>
+                        </button>
                     </div>
-
+                    <!--cart layout-->
                     <div class="header__cart">
-                        <i class="header__cart-icon fas fa-shopping-cart"></i>
+                        <div class="header__cart-hover">
+                            <i class="header__cart-icon fas fa-shopping-cart"></i>
+                            
+                            <div class="header__cart-list header__cart-list--no-cart">
+                                <span class="header__cart-no-cart-msg">Giỏ hàng của bạn đang trống</span>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
         </header>
 
-        <div class="container">
+        
+            <div class="slider">
+                <div class="text-content">
+                 <h2 class="text-heading">Iphone 12</h2>
+                 <div class="text-description">Sang, xịn , mịn</div>
+                </div>
+            </div>
 
+            
+
+        <div class="app__container">
+            <!--responsive-->
+           <div class="grid">
+            <div class="grid__row">
+                <div class="grid__column-2"> <!--2 cột nằm trong dòng đó-->
+                    <nav class="category">
+                        <h3 class="category__heading">
+                            <i class="category__heading-icon fas fa-list-ul"></i>
+                            Danh mục
+                        </h3>
+        
+                        <ul class="category-list">
+                            <li class="category-item category-item--active"> <!--coi đây là block để chia class bem-->
+                                <a href="" class="category-item-link">PHỤ KIỆN APPLE</a>
+                            </li>
+                            <li class="category-item">
+                                <a href="" class="category-item-link">MAC MINI M1</a>
+                            </li>
+                            <li class="category-item">
+                                <a href="" class="category-item-link">IMAC M1</a>
+                            </li>
+                            <li class="category-item">
+                                <a href="" class="category-item-link">MACBOOK PRO M1</a>
+                            </li>
+                            <li class="category-item">
+                                <a href="" class="category-item-link">MACBOOK AIR M1</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                </div>
+
+                <div class="grid__column-10">
+                    <div class="home-filter">
+                        <span class="home-filter__tittle">PHỤ KIỆN APPLE</span>
+                    </div>
+
+                    <div class="home__product">
+                        <!--Grid > Row > Column, muốn dùng Column-2 để dùng lại thì phải tạo row-->
+                        <div class="grid__row">
+                            <div class="gird__column-2-4">
+                                <!--sản phẩm-->
+                                <a class="home-product-item" href="">
+                                    <img src="./assets/img/product/1.png" alt="" class="home-product-item__img">
+                                </a>
+                            </div>
+
+                            <div class="gird__column-2-4">
+                                <a class="home-product-item" href="">
+                                    <img src="./assets/img/product/2.png" alt="" class="home-product-item__img">
+                                </a>
+                            </div>
+                            <div class="gird__column-2-4">
+                                <a class="home-product-item" href="">
+                                    <img src="./assets/img/product/3.png" alt="" class="home-product-item__img">
+                                </a>
+                            </div>
+                            <div class="gird__column-2-4">
+                                <a class="home-product-item" href="">
+                                    <img src="./assets/img/product/4.png" alt="" class="home-product-item__img">
+                                </a>
+                            </div>
+                            <div class="gird__column-2-4">
+                                <a class="home-product-item" href="">
+                                    <img src="./assets/img/product/5.png" alt="" class="home-product-item__img">
+                                </a>
+                            </div>
+
+                            <div class="gird__column-2-4">
+                                <a class="home-product-item" href="">
+                                    <img src="./assets/img/product/6.png" alt="" class="home-product-item__img">
+                                </a>
+                            </div>
+
+                            <div class="gird__column-2-4">
+                                <a class="home-product-item" href="">
+                                    <img src="./assets/img/product/7.png" alt="" class="home-product-item__img">
+                                </a>
+                            </div>
+
+                            <div class="gird__column-2-4">
+                                <a class="home-product-item" href="">
+                                    <img src="./assets/img/product/8.png" alt="" class="home-product-item__img">
+                                </a>
+                            </div>
+
+                            <div class="gird__column-2-4">
+                                <a class="home-product-item" href="">
+                                    <img src="./assets/img/product/9.png" alt="" class="home-product-item__img">
+                                </a>
+                            </div>
+
+                            <div class="gird__column-2-4">
+                                <a class="home-product-item" href="">
+                                    <img src="./assets/img/product/10.png" alt="" class="home-product-item__img">
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                </div>
+            </div>
+           </div>
         </div>
 
-        <footer class="footer">
+        <div class="slider__heading">
+            <img src="./assets/img/sliderHeading/imac mini m1.png" alt="" class="slider__heading-img">
+        
+            </div>
+        
+        <div class="app__container--2">
+                <!--responsive-->
+               <div class="grid">
+                <div class="grid__row">
+                    <div class="grid__column-100">
+                        <div class="home__product">
+                            <!--Grid > Row > Column, muốn dùng Column-2 để dùng lại thì phải tạo row-->
+                            <div class="grid__row">
+                                <div class="grid__column50-50">
+                                    <!--sản phẩm-->
+                                    <a class="home-product-item" href="">
+                                        <img src="./assets/img/product2/1.png" alt="" class="home-product-item__img-2">
+                                    </a>
+                                </div>
+    
+                                <div class="grid__column50-50">
+                                    <a class="home-product-item" href="">
+                                        <img src="./assets/img/product2/2.png" alt="" class="home-product-item__img-2">
+                                    </a>
+                                </div>
+                                <div class="grid__column50-50">
+                                    <a class="home-product-item" href="">
+                                        <img src="./assets/img/product2/3.png" alt="" class="home-product-item__img-2">
+                                    </a>
+                                </div>
+                                <div class="grid__column50-50">
+                                    <a class="home-product-item" href="">
+                                        <img src="./assets/img/product2/4.png" alt="" class="home-product-item__img-2">
+                                    </a>
+                                </div>
+                            </div>
+    
+                        </div>
+                        
+                    </div>
+                </div>
+               </div>
+        </div>
 
-        </footer>
+        <div class="slider__heading--2">
+            <div class="slider__heading-imgs">
+                <img src="./assets/img/sliderHeading/imac-1.png" alt="" class="slider__heading-img-2">
+            </div>
+            <div class="slider__heading-imgs">
+                <img src="./assets/img/sliderHeading/imac-2.png" alt="" class="slider__heading-img-2">
+            </div>
+        </div>
+
+        <div class="app__container--3">
+            <!--responsive-->
+           <div class="grid">
+            <div class="grid__row">
+                <div class="grid__column-100">
+                    <div class="home__product">
+                        <!--Grid > Row > Column, muốn dùng Column-2 để dùng lại thì phải tạo row-->
+                        <div class="grid__row">
+                            <div class="grid__column50-50">
+                                <!--sản phẩm-->
+                                <a class="home-product-item" href="">
+                                    <img src="./assets/img/product3/1.png" alt="" class="home-product-item__img-2">
+                                </a>
+                            </div>
+
+                            <div class="grid__column50-50">
+                                <a class="home-product-item" href="">
+                                    <img src="./assets/img/product3/2.png" alt="" class="home-product-item__img-2">
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                </div>
+            </div>
+           </div>
+         </div>
+        <div class="slider__heading">
+            <img src="./assets/img/product4/macpro.png" alt="" class="slider__heading-img">
+        
+         </div>
+
+         <!--container--4-->
+         <div class="app__container--2">
+            <!--responsive-->
+           <div class="grid">
+            <div class="grid__row">
+                <div class="grid__column-100">
+                    <div class="home__product">
+                        <!--Grid > Row > Column, muốn dùng Column-2 để dùng lại thì phải tạo row-->
+                        <div class="grid__row">
+                            <div class="grid__column50-50">
+                                <!--sản phẩm-->
+                                <a class="home-product-item" href="">
+                                    <img src="./assets/img/product4/1.png" alt="" class="home-product-item__img-2">
+                                </a>
+                            </div>
+
+                            <div class="grid__column50-50">
+                                <a class="home-product-item" href="">
+                                    <img src="./assets/img/product4/2.png" alt="" class="home-product-item__img-2">
+                                </a>
+                            </div>
+                            <div class="grid__column50-50">
+                                <a class="home-product-item" href="">
+                                    <img src="./assets/img/product4/3.png" alt="" class="home-product-item__img-2">
+                                </a>
+                            </div>
+                            <div class="grid__column50-50">
+                                <a class="home-product-item" href="">
+                                    <img src="./assets/img/product4/4.png" alt="" class="home-product-item__img-2">
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                </div>
+            </div>
+           </div>
+         </div>
+
+         <!--container 5-->
+         <div class="slider__heading--5">
+            <div class="slider__heading-imgs">
+                <img src="./assets/img/product5/mac-air.png" alt="" class="slider__heading-img-5">
+            </div>
+        </div>
+        <div class="app__container--3">
+            <!--responsive-->
+           <div class="grid">
+            <div class="grid__row">
+                <div class="grid__column-100">
+                    <div class="home__product">
+                        <!--Grid > Row > Column, muốn dùng Column-2 để dùng lại thì phải tạo row-->
+                        <div class="grid__row">
+                            <div class="grid__column50-50">
+                                <!--sản phẩm-->
+                                <a class="home-product-item" href="">
+                                    <img src="./assets/img/product5/1.png" alt="" class="home-product-item__img-2">
+                                </a>
+                            </div>
+
+                            <div class="grid__column50-50">
+                                <a class="home-product-item" href="">
+                                    <img src="./assets/img/product5/2.png" alt="" class="home-product-item__img-2">
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                </div>
+            </div>
+           </div>
+         </div>                
+         
+         <footer class="footer"> 
+            <div class="grid">
+                <div class="grid__row">
+                    <div class="grid__column-5">
+                        <h3 class="footer__heading">Hệ thống Showroom</h3>
+                        <ul class="footer-list">
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Showroom Phong Hoà - Bình Trị Thiên</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Thời gian làm việc: 8:00 - 22:00 | Thứ 2 - Chủ nhật</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Showroom An Thơ - Quảng Trị</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Thời gian làm việc: 8:00 - 22:00 | Thứ 2 - Chủ nhật</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="grid__column-5">
+                        <h3 class="footer__heading">Các chính sách</h3>
+                        <ul class="footer-list">
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Chính sách bảo hành</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Chính sách giao hàng</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Chính sách bảo mật</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Hướng dẫn thanh toán</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="grid__column-5">
+                        <h3 class="footer__heading">Hotline hỗ trợ khách hàng</h3>
+                        <ul class="footer-list">
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Gọi mua hàng</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Gọi CSKH & Khiếu nại</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Gọi bảo hành</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Kỹ thuật</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="grid__column-5">
+                        <h3 class="footer__heading">Cộng đồng DocholagShop</h3>
+                        <ul class="footer-list">
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Fanpage DocholagShop</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">VOZ - Diễn đàn công nghệ</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">VOZ News - Tin tức công nghệ</a>
+                            </li>
+                            <li class="footer-item">
+                                <a href="" class="footer-item__link">Kênh tuyển dụng</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="grid__column-5">
+                        <h3 class="footer__heading">Vào cửa hàng trên ứng dụng</h3>
+                        <div class="footer__dowload">
+                            <img src="/assets/img/qrcode/qr_code.png" alt="QR" class="footer__dowload-qr">
+                            <div class="footer__dowload-apps">
+                                <a href="" class="footer__dowload-apps-link">
+                                    <img src="/assets/img/qrcode/appstore.png" alt="ggplay" class="footer__dowload-app-img">
+                                </a>
+                                <a href="" class="footer__dowload-apps-link">
+                                    <img src="/assets/img/qrcode/ggplay.png" alt="appstore" class="footer__dowload-app-img">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="grid">
+                    <p class="footer__by">Powered by docholag<3</p>
+                </div>
+            </div>
+        </footer> 
     </div>
     <!--modal layout-->
     <!-- <div class="modal"> -->
