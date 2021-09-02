@@ -44,6 +44,12 @@
         width: 120px;
         text-align: right;
     }
+    .slider__heading-img{
+        height: 353.271px;
+    }
+    .home-product-item{
+        text-align: center;
+    }
 }
 
 /*mobile*/
