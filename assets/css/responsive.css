@@ -99,6 +99,40 @@
         margin: 0 18px;
     }
 
+
+    /*heading and sp*/
+    .slider__heading-img {
+        width: 396.779px;
+        height: 129.542px;
+    }
+
+    .slider__heading{
+        min-height: 0;
+    }
+
+    .home-product-item__img-2{
+        width: 400px;
+        height: 204.358px;
+        margin-left: -3px;
+    }
+
+    .slider__heading--2{
+        min-height: 0;
+    }
+
+    .slider__heading-img-2{
+        width: 222.951px;
+        height: 117.112px;  
+    }
+
+    .slider__heading-img-5 {    
+        width: 446.196px;
+        height: 112.542px;
+    }
+
+    .slider__heading--5{
+        min-height: 0;
+    }
     @keyframes mobileSearchSideIn {
         from{
             opacity: 0;
