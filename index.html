@@ -11,13 +11,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="./assets/fonts/fontawesome-free-5.15.4-web/css/all.min.css">
 </head>
 <body> <!--đặt class chuẩn BEM-->
     <div class="main">
         <header class="header">
-            <div class="grid">
-                <nav class="header__navbar">
+            <div class="grid wide">
+                <nav class="header__navbar hide-on-mobile-tablet">
                     <ul class="header__navbar-list">
                         <li class="header__navbar-item header__navbar-item--has-qr header__navbar-item--senparate">
                             Phương thức tải xuống Docholag Shop
@@ -66,9 +68,14 @@
 
                 <!--header with search-->
                 <div class="header-with-search">
+                    <label for="mobile-search-checkbox" class="header__mobile-search">
+                        <i class="header__mobile-search-icon fas fa-search"></i>
+                    </label>
                     <div class="header__logo">
                         <a href="#" class="header__logo-img">Docholag</a>
                     </div>
+
+                    <input type="checkbox" hidden id="mobile-search-checkbox" class="header__search-checkbox">
 
                     <div class="header__search">
                         <div class="header__search-input-wrap">
@@ -123,20 +130,39 @@
         </header>
 
         
-            <div class="slider">
+        <div class="slider">
                 <div class="text-content">
                  <h2 class="text-heading">Iphone 12</h2>
                  <div class="text-description">Sang, xịn , mịn</div>
                 </div>
-            </div>
+        </div>
 
+
+        <nav class="mobile-category">
+            <ul class="mobile-category__list">
+                <li class="mobile-category__item">
+                    <a href="" class="mobile-category__link">PHỤ KIỆN APPLE</a>
+                </li>
+                <li class="mobile-category__item">
+                    <a href="" class="mobile-category__link">MAC MINI M1</a>
+                </li>
+                <li class="mobile-category__item">
+                    <a href="" class="mobile-category__link">IMAC M1</a>
+                </li>
+                <li class="mobile-category__item">
+                    <a href="" class="mobile-category__link">MACBOOK PRO M1</a>
+                </li>
+                <li class="mobile-category__item">
+                    <a href="" class="mobile-category__link">MACBOOK AIR M1</a>
+                </li>
+            </ul>
+        </nav>
             
 
-        <div id="phukien-apple" class="app__container">
-            <!--responsive-->
-           <div class="grid">
-            <div class="grid__row">
-                <div class="grid__column-2"> <!--2 cột nằm trong dòng đó-->
+        <div id="PK-apple" class="app__container">
+           <div class="grid wide">
+            <div class="row sm-gutter ">
+                <div class="col l-2 m-0 c-0"> <!--ẩn trên mb, tablet-->
                     <nav class="category">
                         <h3 class="category__heading">
                             <i class="category__heading-icon fas fa-list-ul"></i>
@@ -145,7 +171,7 @@
         
                         <ul class="category-list">
                             <li class="category-item category-item--active"> <!--coi đây là block để chia class bem-->
-                                <a href="#slider__heading" class="category-item-link">PHỤ KIỆN APPLE</a>
+                                <a href="#PK-apple" class="category-item-link">PHỤ KIỆN APPLE</a>
                             </li>
                             <li class="category-item">
                                 <a href="#mac-mini" class="category-item-link">MAC MINI M1</a>
@@ -164,67 +190,67 @@
 
                 </div>
 
-                <div class="grid__column-10">
+                <div class="col l-10 m-12 c-12">
                     <div class="home-filter">
                         <span class="home-filter__tittle">PHỤ KIỆN APPLE</span>
                     </div>
 
                     <div class="home__product">
                         <!--Grid > Row > Column, muốn dùng Column-2 để dùng lại thì phải tạo row-->
-                        <div class="grid__row">
-                            <div class="gird__column-2-4">
+                        <div class="row sm-gutter">
+                            <div class="col l-2-4 m-4 c-6">
                                 <!--sản phẩm-->
                                 <a class="home-product-item" href="https://www.apple.com/shop/select-airpods">
                                     <img src="./assets/img/product/1.png" alt="" class="home-product-item__img">
                                 </a>
                             </div>
 
-                            <div class="gird__column-2-4">
+                            <div class="col l-2-4 m-4 c-6">
                                 <a class="home-product-item" href="https://www.apple.com/shop/select-airpods">
                                     <img src="./assets/img/product/2.png" alt="" class="home-product-item__img">
                                 </a>
                             </div>
-                            <div class="gird__column-2-4">
+                            <div class="col l-2-4 m-4 c-6">
                                 <a class="home-product-item" href="https://www.apple.com/shop/buy-airpods/airpods-max">
                                     <img src="./assets/img/product/3.png" alt="" class="home-product-item__img">
                                 </a>
                             </div>
-                            <div class="gird__column-2-4">
+                            <div class="col l-2-4 m-4 c-6">
                                 <a class="home-product-item" href="https://www.apple.com/store">
                                     <img src="./assets/img/product/4.png" alt="" class="home-product-item__img">
                                 </a>
                             </div>
-                            <div class="gird__column-2-4">
+                            <div class="col l-2-4 m-4 c-6">
                                 <a class="home-product-item" href="https://www.apple.com/store">
                                     <img src="./assets/img/product/5.png" alt="" class="home-product-item__img">
                                 </a>
                             </div>
 
-                            <div class="gird__column-2-4">
+                            <div class="col l-2-4 m-4 c-6">
                                 <a class="home-product-item" href="https://www.apple.com/store">
                                     <img src="./assets/img/product/6.png" alt="" class="home-product-item__img">
                                 </a>
                             </div>
 
-                            <div class="gird__column-2-4">
+                            <div class="col l-2-4 m-4 c-6">
                                 <a class="home-product-item" href="https://www.apple.com/store">
                                     <img src="./assets/img/product/7.png" alt="" class="home-product-item__img">
                                 </a>
                             </div>
 
-                            <div class="gird__column-2-4">
+                            <div class="col l-2-4 m-4 c-6">
                                 <a class="home-product-item" href="https://www.apple.com/store">
                                     <img src="./assets/img/product/8.png" alt="" class="home-product-item__img">
                                 </a>
                             </div>
 
-                            <div class="gird__column-2-4">
+                            <div class="col l-2-4 m-4 c-6">
                                 <a class="home-product-item" href="https://www.apple.com/store">
                                     <img src="./assets/img/product/9.png" alt="" class="home-product-item__img">
                                 </a>
                             </div>
 
-                            <div class="gird__column-2-4">
+                            <div class="col l-2-4 m-4 c-6">
                                 <a class="home-product-item" href="https://www.apple.com/store">
                                     <img src="./assets/img/product/10.png" alt="" class="home-product-item__img">
                                 </a>
@@ -245,12 +271,12 @@
         
         <div class="app__container--2">
                 <!--responsive-->
-               <div class="grid">
-                <div class="grid__row">
+               <div class="grid wide">
+                <div class="row">
                     <div class="grid__column-100">
                         <div class="home__product">
                             <!--Grid > Row > Column, muốn dùng Column-2 để dùng lại thì phải tạo row-->
-                            <div class="grid__row">
+                            <div class="row">
                                 <div class="grid__column50-50">
                                     <!--sản phẩm-->
                                     <a class="home-product-item" href="https://www.apple.com/shop/buy-mac/mac-mini">
@@ -293,12 +319,12 @@
 
         <div class="app__container--3">
             <!--responsive-->
-           <div class="grid">
-            <div class="grid__row">
+           <div class="grid wide">
+            <div class="row">
                 <div class="grid__column-100">
                     <div class="home__product">
                         <!--Grid > Row > Column, muốn dùng Column-2 để dùng lại thì phải tạo row-->
-                        <div class="grid__row">
+                        <div class="row">
                             <div class="grid__column50-50">
                                 <!--sản phẩm-->
                                 <a class="home-product-item" href="https://www.apple.com/shop/buy-mac/imac">
@@ -327,12 +353,12 @@
          <!--container--4-->
          <div class="app__container--2">
             <!--responsive-->
-           <div class="grid">
-            <div class="grid__row">
+           <div class="grid wide">
+            <div class="row">
                 <div class="grid__column-100">
                     <div class="home__product">
                         <!--Grid > Row > Column, muốn dùng Column-2 để dùng lại thì phải tạo row-->
-                        <div class="grid__row">
+                        <div class="row">
                             <div class="grid__column50-50">
                                 <!--sản phẩm-->
                                 <a class="home-product-item" href="https://www.apple.com/shop/buy-mac/macbook-pro/13-inch">
@@ -372,12 +398,12 @@
         </div>
         <div class="app__container--3">
             <!--responsive-->
-           <div class="grid">
-            <div class="grid__row">
+           <div class="grid wide">
+            <div class="row">
                 <div class="grid__column-100">
                     <div class="home__product">
                         <!--Grid > Row > Column, muốn dùng Column-2 để dùng lại thì phải tạo row-->
-                        <div class="grid__row">
+                        <div class="row">
                             <div class="grid__column50-50">
                                 <!--sản phẩm-->
                                 <a class="home-product-item" href="https://www.apple.com/shop/buy-mac/macbook-air">
@@ -400,9 +426,9 @@
          </div>                
 
          <footer class="footer"> 
-            <div class="grid">
-                <div class="grid__row">
-                    <div class="grid__column-5">
+            <div class="grid wide">
+                <div class="row">
+                    <div class="col l-2-4 m-4 c-6">
                         <h3 class="footer__heading">Hệ thống Showroom</h3>
                         <ul class="footer-list">
                             <li class="footer-item">
@@ -420,7 +446,7 @@
                         </ul>
                     </div>
 
-                    <div class="grid__column-5">
+                    <div class="col l-2-4 m-4 c-6">
                         <h3 class="footer__heading">Các chính sách</h3>
                         <ul class="footer-list">
                             <li class="footer-item">
@@ -438,7 +464,7 @@
                         </ul>
                     </div>
 
-                    <div class="grid__column-5">
+                    <div class="col l-2-4 m-4 c-6">
                         <h3 class="footer__heading">Hotline hỗ trợ khách hàng</h3>
                         <ul class="footer-list">
                             <li class="footer-item">
@@ -456,7 +482,7 @@
                         </ul>
                     </div>
 
-                    <div class="grid__column-5">
+                    <div class="col l-2-4 m-4 c-6">
                         <h3 class="footer__heading">Cộng đồng DocholagShop</h3>
                         <ul class="footer-list">
                             <li class="footer-item">
@@ -474,7 +500,8 @@
                         </ul>
                     </div>
 
-                    <div class="grid__column-5">
+                    <!--m-8 luôn, cho chiếm hết phần còn lại-->
+                    <div class="col l-2-4 m-8 c-12">
                         <h3 class="footer__heading">Vào cửa hàng trên ứng dụng</h3>
                         <div class="footer__dowload">
                             <img src="https://docholag.github.io/docholag_shop/assets/img/qrcode/qr_code.png" alt="QR" class="footer__dowload-qr">
@@ -491,22 +518,19 @@
 
                 </div>
 
-                <div class="grid">
+                <div class="grid wide">
                     <p class="footer__by">Powered by docholag<3</p>
                 </div>
             </div>
         </footer> 
     </div>
     <!--modal layout-->
-    <!-- <div class="modal"> -->
-         <!-- <div class="modal__overlay"> phần mờ bao quanh-->
-
-        <!-- </div>
-        <div class="modal__body">
-             -->
-
+       <!-- <div class="modal"> 
+         <div class="modal__overlay"> phần mờ bao quanh
+          </div>-->
+      <!-- <div class="modal__body">-->
                 <!--Register form-->
-                <!-- <div class="auth-form">
+                <!-- <div class="auth-form__register">
                    <div class="auth-form__container">
                     <div class="auth-form__header">
                         <h3 class="auth-form__heading">Đăng kí</h3>
@@ -550,10 +574,10 @@
                             Kết nối với Instagram
                         </a>
                     </div>
-                </div> -->
+                </div>  -->
 
                  <!--Login form-->
-                 <!-- <div class="auth-form">
+                  <!-- <div class="auth-form__login">
                     <div class="auth-form__container">
                      <div class="auth-form__header">
                          <h3 class="auth-form__heading">Đăng nhập</h3>
@@ -597,8 +621,16 @@
                      </div>
                  </div> -->
 
-            </div>
+           <!-- </div>
         </div>
-    </div>
+    </div>-->
+
+    <!--thêm khi sử dụng file grid-->
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+    </style>
+
 </body>
 </html>

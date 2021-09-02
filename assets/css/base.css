@@ -27,15 +27,6 @@ html {
 /*có 3 cấp, ngoài cùng là Grid, trong grid có row, trong row có column
 trong grid có nhiều row, trong col có thể có nhiều col khác*/
 
-.grid { 
-    width: 1200px;
-    max-width: 100%; /*giảm kích thước grid tương ứng với màn hình nhỏ hơn 1200px*/
-    margin: 0 auto; /*tự động căn giữa khối này nằm trong khối khác*/
-}
- 
-.grid__full-width { /*trường hợp không muốn sử dụng grid ở trên*/
-    width: 100%;
-}
 
 .grid__row {  /*dùng cho class muốn nằm trên 1 hàng ngang*/
     display: flex;
@@ -110,7 +101,8 @@ trong grid có nhiều row, trong col có thể có nhiều col khác*/
 
 /*modal layout*/
 .modal{
-    position: fixed;
+    /* display: none; */
+    position: relative;
     top: 0;
     right: 0;
     bottom: 0;
@@ -120,17 +112,20 @@ trong grid có nhiều row, trong col có thể có nhiều col khác*/
 }
 
 .modal__overlay{
-    position: absolute; /*con của modal*/
+    /* display: none; */
+    position: fixed;
+    /*position: absolute; */
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.4);
 }
 
 .modal__body{
+    /* display: none; */
     margin: auto; /*tự động căn giữa vì có modal flex*/
     /* width: 300px; không cần set, viết content vào thì nó tự to ra
     height: 300px; */
-    position: relative; /*để body nằm trên overlay*/
+    position: absolute; /*để body nằm trên overlay*/
     z-index: 1; /*mặc định bọn còn lại là 0, thằng mô nhiều điểm hơn thì nằm trên cùng*/
     --Growth-from: 0.7; /*đầu tiên là 70%*/
     --Growth-to: 1; /*sau đó to lên kích thước tối đa của nó */

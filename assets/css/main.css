@@ -2,6 +2,10 @@ html{
     scroll-behavior: smooth; 
 }
 
+.main{
+    overflow: hidden;
+}
+
 .header{
     height: var(--header-height);
     background-color: #292b2d;
@@ -129,7 +133,14 @@ html{
 
 /*authen modal*/
 
-.auth-form{
+.auth-form__register{
+    width: 500px;
+    border-radius: 10px;
+    background-color: var(--white-color);
+    overflow: hidden; /*nếu thằng con vượt quá thg cha thì hiden, vì backgroud che ở dưới*/
+}
+
+.auth-form__login{
     width: 500px;
     border-radius: 10px;
     background-color: var(--white-color);
@@ -245,6 +256,7 @@ html{
     text-decoration: none;
     font-weight: 500;
     color: var(--white-color);
+    -webkit-tap-highlight-color: transparent;
 }
 
 .header__search{
@@ -260,6 +272,7 @@ html{
 .header__cart{
     width: 150px;
     text-align: center; /*cho ra giữa*/
+    -webkit-tap-highlight-color: transparent;
 }
 
 .header__cart-hover{
@@ -524,6 +537,7 @@ html{
 /*app container*/
 .app__container{
     background-color: #efefef;
+
 }
 
 .category{
@@ -565,6 +579,51 @@ html{
 
 .category-item-link:hover{
     right: -3px; /*right sẽ thay đổi*/
+}
+
+/*mobile-category*/
+.mobile-category{
+    display: none;
+}
+
+.mobile-category__list{
+    display: flex;
+    list-style: none;
+    padding-left: 10px;
+
+    max-width: 100%;
+    overflow-x: auto; /*nếu thẻ con vượt quá 100% sẽ thành thanh scroll kéo ngang*/
+}
+
+/*ẩn thanh scroll*/
+.mobile-category__list::-webkit-scrollbar{
+    display: none;
+}
+
+.mobile-category__item{
+    flex-shrink: 0; /*tự động dãn ra khi lớn hơn thẻ cha, chuyển sang nằm ngang*/
+    margin-right: 10px;
+}
+
+.mobile-category__link{
+    text-decoration: none;
+    color: var(--black-color);
+    font-size: 1.4rem;
+    line-height: 2rem;
+    text-align: center;
+
+    display: block; /*để set kích thước*/
+    width: 110px;
+    height: 40px;
+
+    background-color: #efefef;
+    border-radius: 3px;
+    font-weight: 500;
+
+    /*k cho select chữ*/
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent; /*ấn vào không đổi màu background*/
 }
 
 /*product heading*/
@@ -722,4 +781,15 @@ html{
 .slider__heading-img-5{
     width: 1017.08px;
     height: 352.271px;
+}
+
+/*search in mobile*/
+.header__mobile-search{
+    display: none;
+}
+
+.header__mobile-search-icon{
+    font-size: 3rem;
+    color: var(--white-color);
+    text-align: center;
 }
